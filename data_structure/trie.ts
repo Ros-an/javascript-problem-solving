@@ -49,4 +49,15 @@ export default class Trie {
         return current.isEnd;
     }
     // start with word
+    startsWith(prefix: string): boolean {
+        let current = this.root;
+
+        for (let i = 0; i < prefix.length; i++) {
+            if(!(prefix[i] in current.children)){
+                return false;
+            }
+            current = current.children[prefix[i]]
+        }
+        return true;
+    }
 }
