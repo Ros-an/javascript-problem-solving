@@ -33,10 +33,3 @@ export default class Stack {
         this.items = [];
     }
 }
-// push
-
-// pop
-// peek
-// empty
-// size
-// clear
